@@ -112,6 +112,33 @@ Key|Value
 Endpoint|https://sprintsample.azurewebsites.net
 App Service Plan|SprintSESATIDMSample (Basic: 1 small)
 
+###Using scopes to control client access
+Scopes can be used to control how clients may interact with the resource (API). Each scope defines
+a particular action, eg.:
+- Read a user's calendar
+- Send mail on behalf of user
+- ...
+
+When authenticating against the API, a set of scopes (defined in a comma-separated list) can be passed
+in the request. The end-user will be asked to grant the application access to the data needed for the 
+requested scopes. The access token returned to the client then is valid for performing the requested actions.
+
+Scopes are defined in the application manifest
+
+'''json
+"oauth2Permissions": [
+{
+    "adminConsentDescription": "Allow the application full access to the Todo List service on behalf of the signed-in   user",
+    "adminConsentDisplayName": "Have full access to the Todo List service",
+    "id": "b69ee3c9-c40d-4f2a-ac80-961cd1534e40",
+    "isEnabled": true,
+    "type": "User",
+    "userConsentDescription": "Allow the application full access to the todo service on your behalf",
+    "userConsentDisplayName": "Have full access to the todo service",
+    "value": "user_impersonation"
+    }
+],
+
 #Notes
 - Using ModernHttpClient to properly handle https requests for iOS and Android.
 
