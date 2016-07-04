@@ -140,6 +140,7 @@ for a scope to get full access to a user's ToDo list.
     }
 ]
 ```
+The client can then use the scope's key value "user_impersonation" to request access.
 
 #Notes
 - Using ModernHttpClient to properly handle https requests for iOS and Android.
