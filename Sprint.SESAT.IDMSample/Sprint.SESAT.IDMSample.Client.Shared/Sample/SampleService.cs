@@ -14,7 +14,7 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.Sample
     public class SampleService : HttpServiceBase, ISampleService
     {
         private readonly string _baseUrl;
-
+        
         public SampleService(ILoginService loginService, string baseUrl) : base(loginService)
         {
             _baseUrl = baseUrl;
@@ -31,6 +31,23 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.Sample
                     var jsonString = await httpClient.GetStringAsync(requestUrl);
                     var result = JsonConvert.DeserializeObject<IEnumerable<string>>(jsonString);
                     return result;
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+            }
+        }
+
+        [Authorize()]
+        public async Task LogoutAsync()
+        {
+            var requestUrl = ConfigConstants.LogoutUrl;
+            using (var httpClient = await CreateHttpClient())
+            {
+                try
+                {
+                    var jsonString = await httpClient.GetStringAsync(requestUrl);
                 }
                 catch (Exception ex)
                 {

@@ -44,18 +44,27 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.Sample
         }
 
         public RelayCommand LoadDataCommand { get; private set; }
+        public RelayCommand LogoutCommand { get; set; }
 
         public SampleViewModel(ISampleService sampleService)
         {
             _sampleService = sampleService;
-            LoadDataCommand = new RelayCommand(LoadData);
+            LoadDataCommand = new RelayCommand(loadData);
+            LogoutCommand = new RelayCommand(logout);
         }
 
 
-        private async void LoadData()
+        private async void loadData()
         {
             IsLoading = true;
             SampleList = await _sampleService.GetAsync();
+            IsLoading = false;
+        }
+
+        private async void logout()
+        {
+            IsLoading = true;
+            await _sampleService.LogoutAsync();
             IsLoading = false;
         }
     }
