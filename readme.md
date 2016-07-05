@@ -164,6 +164,8 @@ Just as scopes, roles can be defined in the application manifest file in the man
     }
   ]
   ```
+
+### Backend Configuration
 When writing API endpoints, use the authorize tag to restrict the API to spcific roles. Here's an example of a GET API endpoint that restricts
 access to Admins, Sprint Partners and Insurances. We can then proceed and perform different actions based on the user's actual role:
 ```c#
@@ -182,6 +184,15 @@ public object GetObject()
     ...
 }
 ```
+
+To retrieve a user's roles, use
+```c# 
+ClaimsIdentity claimsId = ClaimsPrincipal.Current.Identity as ClaimsIdentity;
+var appRoles = new List<String>();
+foreach (Claim claim in ClaimsPrincipal.Current.FindAll(claimsId.RoleClaimType))
+    appRoles.Add(claim.Value);
+```
+
 
 #Notes
 - Using ModernHttpClient to properly handle https requests for iOS and Android.
