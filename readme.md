@@ -112,7 +112,7 @@ Key|Value
 Endpoint|https://sprintsample.azurewebsites.net
 App Service Plan|SprintSESATIDMSample (Basic: 1 small)
 
-#####Using scopes to control client access
+##Using scopes to control client access
 Scopes can be used to control how clients may interact with the resource (API). Each scope defines
 a particular action, eg.:
 - Read a user's calendar
@@ -142,7 +142,7 @@ for a scope to get full access to a user's ToDo list.
 ```
 The client can then use the scope's key value "user_impersonation" to request access.
 
-#### Roles based access control (RBAC)
+## Roles based access control (RBAC)
 
 
 #Notes
