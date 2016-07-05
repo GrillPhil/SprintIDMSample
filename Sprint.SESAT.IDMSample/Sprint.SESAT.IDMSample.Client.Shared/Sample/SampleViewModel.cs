@@ -60,6 +60,7 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.Sample
         }
 
         public RelayCommand LoadDataCommand { get; private set; }
+
         public RelayCommand LogoutCommand { get; set; }
 
         public SampleViewModel(ISampleService sampleService)
@@ -68,7 +69,6 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.Sample
             LoadDataCommand = new RelayCommand(loadData);
             LogoutCommand = new RelayCommand(logout);
         }
-
 
         private async void loadData()
         {

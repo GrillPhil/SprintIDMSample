@@ -5,20 +5,30 @@
     xmlns:local="using:Sprint.SESAT.IDMSample.Client.Windows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:utils="using:Sprint.SESAT.IDMSample.Client.Windows.Utils"
     mc:Ignorable="d"
     DataContext="{Binding Source={StaticResource BootStrapper}, Path=SampleViewModel}">
+    
+    <Page.Resources>
+        <utils:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Button Margin="12"
-                Content="Load Data"
-                Command="{Binding LoadDataCommand}"/>
         <ListView ItemsSource="{Binding SampleList}" 
                   Grid.Row="1"/>
         <ProgressRing IsActive="{Binding IsLoading}" 
                       Grid.RowSpan="2"/>
     </Grid>
+    
+    <Page.BottomAppBar>
+        <CommandBar Visibility="{x:Bind ViewModel.IsLoggedIn, Converter={StaticResource BoolToVisibilityConverter}, Mode=OneWay}">
+            <AppBarButton Label="Logout"
+                          Icon="Cancel"
+                          Command="{x:Bind ViewModel.LogoutCommand}"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>
