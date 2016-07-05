@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Sprint.SESAT.IDMSample.Client.iOS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.ml.*</string>
+	<string>com.ml.Sprint.SESAT.IDMSample.Client.iOS</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

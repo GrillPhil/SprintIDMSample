@@ -42,14 +42,13 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.Sample
             }
         }
 
-        [Authorize()]
         public async Task<bool> LogoutAsync()
         {
             _loginService.Logout();
 
             string requestUrl = ConfigConstants.LogoutUrl;
 
-            var client = new HttpClient();
+            var client = await CreateHttpClient();
             var request = new HttpRequestMessage(HttpMethod.Get, requestUrl);
             try
             {

@@ -21,10 +21,15 @@ namespace Sprint.SESAT.IDMSample.Client.iOS
             // create a new window instance based on the screen size
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
+            // create the start page of type MainViewController and put it in a UINavigationController, in order to show a NavigationBar
+            // on top of the page.
             var rootViewController = new UINavigationController(new MainViewController());
+
+            // create a new BootStrapper instance to register all relevant services and ViewModels. The root ViewController needs to be passed as a Parameter
+            // for the AuthenticationContext
             new BootStrapper(rootViewController);
 
-            // If you have defined a root view controller, set it here:
+            // set the rootViewController as start page
             Window.RootViewController = rootViewController;
 
             // make the window visible
