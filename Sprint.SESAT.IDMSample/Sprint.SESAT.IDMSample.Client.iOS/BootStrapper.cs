@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using GalaSoft.MvvmLight.Ioc;
+﻿using GalaSoft.MvvmLight.Ioc;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Microsoft.Practices.ServiceLocation;
 using Sprint.SESAT.IDMSample.Client.Shared;

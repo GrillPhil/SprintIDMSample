@@ -30,7 +30,7 @@ namespace Sprint.SESAT.IDMSample.Client.Windows
                                     ConfigConstants.ClientId,
                                     ConfigConstants.Authority,
                                     ConfigConstants.RedirectUri,
-                                    new PlatformParameters(PromptBehavior.Always, false));
+                                    new PlatformParameters(PromptBehavior.Auto, false));
         }
 
         private ISampleService SampleServiceFactory()
