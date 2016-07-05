@@ -34,5 +34,11 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.AzureAD
             var authResult = await authContext.AcquireTokenAsync(_resource, _clientId, _redirectUri, _platformParameters);
             return authResult;
         }
+
+        public void Logout()
+        {
+            var authContext = new AuthenticationContext(_authority);
+            authContext.TokenCache.Clear();
+        }
     }
 }

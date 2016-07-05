@@ -12,7 +12,7 @@ namespace Sprint.SESAT.IDMSample.Client.Shared
         public static string Resource = "http://SprintSample.onmicrosoft.com/Sprint.SESAT.IDMSample.ADApp.Webapi";
         public static string ClientId = "cbe60fcb-5c37-4884-8658-5e8905efdfc8";
         public static string Authority = "https://login.windows.net/SprintSample.onmicrosoft.com";
-        public static string LogoutUrl = "https://login.microsoftonline.com/SprintSample.onmicrosoft.com/oauth2/logout?post_logout_redirect_uri=";
+        public static string LogoutUrl = "https://login.microsoftonline.com/SprintSample.onmicrosoft.com/oauth2/logout?post_logout_redirect_uri=https://sprintsample.azurewebsites.net/api/Sample";
         public static Uri RedirectUri = new Uri("http://Sprint.SESAT.IDMSample.ADApp.NativeApp");
     }
 }

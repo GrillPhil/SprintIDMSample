@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +14,7 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.Sample
         private readonly ISampleService _sampleService;
 
         private bool _isLoading = false;
+        private bool _isLoggedIn;
         private IEnumerable<string> _sampleList;
 
         public bool IsLoading
@@ -25,6 +27,20 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.Sample
             set
             {
                 _isLoading = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public bool IsLoggedIn
+        {
+            get
+            {
+                return _isLoggedIn;
+            }
+
+            set
+            {
+                _isLoggedIn = value;
                 RaisePropertyChanged();
             }
         }
@@ -57,14 +73,29 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.Sample
         private async void loadData()
         {
             IsLoading = true;
-            SampleList = await _sampleService.GetAsync();
+            try
+            {
+                SampleList = await _sampleService.GetAsync();
+                IsLoggedIn = true;
+            }
+            catch (HttpRequestException ex)
+            {
+                // do nothing
+            }
+            
             IsLoading = false;
         }
 
         private async void logout()
         {
             IsLoading = true;
-            await _sampleService.LogoutAsync();
+            var success = await _sampleService.LogoutAsync();
+            if (success)
+            {
+                IsLoggedIn = false;
+                SampleList = new List<string>();
+                loadData();
+            }
             IsLoading = false;
         }
     }

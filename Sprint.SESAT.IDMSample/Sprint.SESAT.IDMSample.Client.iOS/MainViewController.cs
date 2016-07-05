@@ -14,17 +14,20 @@ namespace Sprint.SESAT.IDMSample.Client.iOS
 
         private UITableView _sampleDataTableView;
         private UIActivityIndicatorView _loadingIndicator;
+        private UIBarButtonItem _logoutButton;
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            
+
             _sampleViewModel = ServiceLocator.Current.GetInstance<SampleViewModel>();
             _sampleViewModel.PropertyChanged += _sampleViewModel_PropertyChanged;
 
             setupNavigationBar();
             setupToolBar();
             setupViewElements();
+
+            _sampleViewModel.LoadDataCommand.Execute(null);
         }
 
         private void setupViewElements()
@@ -44,7 +47,7 @@ namespace Sprint.SESAT.IDMSample.Client.iOS
                 Hidden = true
             };
 
-            View.AddSubviews(_loadingIndicator, _sampleDataTableView);
+            View.AddSubviews(_sampleDataTableView, _loadingIndicator);
 
             NSLayoutConstraint.Create(_sampleDataTableView, NSLayoutAttribute.TopMargin, NSLayoutRelation.Equal, View,
                 NSLayoutAttribute.Top, 1, 8).Active = true;
@@ -65,9 +68,9 @@ namespace Sprint.SESAT.IDMSample.Client.iOS
 
         private void setupNavigationBar()
         {
+            Title = "Sprint.SESAT.IDMSample";
             NavigationController.NavigationBar.Translucent = false;
-            var logoutButton = new UIBarButtonItem("Logout", UIBarButtonItemStyle.Plain, (s, e) => {_sampleViewModel.LogoutCommand.Execute(null); });
-            NavigationItem.RightBarButtonItem = logoutButton;
+            _logoutButton = new UIBarButtonItem("Logout", UIBarButtonItemStyle.Plain, (s, e) => {_sampleViewModel.LogoutCommand.Execute(null); });
         }
 
         private void _sampleViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -84,6 +87,10 @@ namespace Sprint.SESAT.IDMSample.Client.iOS
                 _sampleDataTableView.Source = new SampleDataTableViewSource(_sampleViewModel.SampleList);
                 _sampleDataTableView.ReloadData();
                 _sampleDataTableView.Hidden = false;
+            }
+            else if (e.PropertyName.Equals(nameof(_sampleViewModel.IsLoggedIn)))
+            {
+                NavigationItem.RightBarButtonItem = _sampleViewModel.IsLoggedIn ? _logoutButton : null;
             }
         }
     }

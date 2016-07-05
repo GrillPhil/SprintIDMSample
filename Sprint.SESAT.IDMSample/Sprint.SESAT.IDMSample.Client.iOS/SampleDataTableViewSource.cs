@@ -28,5 +28,10 @@ namespace Sprint.SESAT.IDMSample.Client.iOS
         {
             return _listItems.Count;
         }
+
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        {
+            tableView.DeselectRow(indexPath, false);
+        }
     }
 }

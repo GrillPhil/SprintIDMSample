@@ -59,21 +59,5 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.Service
 
             return httpClient;
         }
-
-        public async void LogoutAsync()
-        {
-            var requestUrl = ConfigConstants.LogoutUrl;
-            using (var httpClient = await CreateHttpClient())
-            {
-                try
-                {
-                    var jsonString = await httpClient.GetStringAsync(requestUrl);
-                }
-                catch (Exception ex)
-                {
-                    throw;
-                }
-            }
-        }
     }
 }

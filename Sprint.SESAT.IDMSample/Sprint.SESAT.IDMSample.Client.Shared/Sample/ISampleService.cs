@@ -9,6 +9,6 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.Sample
     public interface ISampleService
     {
         Task<IEnumerable<string>> GetAsync();
-        Task LogoutAsync();
+        Task<bool> LogoutAsync();
     }
 }
