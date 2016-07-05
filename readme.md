@@ -7,23 +7,39 @@
 - styling/customization of login experience
 
 #Azure Configuration
+##Azure Test Subscription
+- Free 30 day trial, started 05.07.2016
+- 170 € credit
+
+##Microsoft Account
+Key|Value
+-|-
+Username|sprint.sesat.idmsample@outlook.com
+Password|Sprint!2016
+
 ##Resource Group
 Key|Value
 -|-
 Name|Sprint.SESAT.IDMSample
 Subscription|Visual Studio Ultimate bei MSDN (bauknecht@medialesson.de)
 
+##Azure Web App with Sample Api
+Key|Value
+-|-
+Endpoint|https://sprintsesatidmsample.azurewebsites.net
+App Service Plan|SprintSESATIDMSample (Basic: 1 small, West Europe)
+
 ##Azure Active Directory
 Key|Value
 -|-
 Name|Sprint.SESAT.IDMSample
-Domain|SprintSample.onmicrosoft.com
+Domain|SprintIDMSample.onmicrosoft.com
 
 ###Sample User
 Key|Value
 -|-
 Name|John Doe
-Username|johndoe@sprintsample.onmicrosoft.com
+Username|johndoe@SprintIDMSample.onmicrosoft.com
 Password|Sprint!2016
 
 ###Azure AD Applications
@@ -33,7 +49,7 @@ Key|Value
 Name|Sprint.SESAT.IDMSample.ADApp.Webapi
 Type|Web Application
 Sign-on Url|http://localhost:55555
-App Id Uri|http://SprintSample.onmicrosoft.com/Sprint.SESAT.IDMSample.ADApp.Webapi
+App Id Uri|http://SprintIDMSample.onmicrosoft.com/Sprint.SESAT.IDMSample.ADApp.Webapi
 
 #####manifest.json
 ```json
@@ -93,7 +109,7 @@ App Id Uri|http://SprintSample.onmicrosoft.com/Sprint.SESAT.IDMSample.ADApp.Weba
   "manager": null,
   "directReports": [],
   "members": [],
-  "memberOf": [],
+ "memberOf": [],
   "owners": [],
   "ownedObjects": []
 }
