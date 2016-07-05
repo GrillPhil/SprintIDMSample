@@ -1837,8 +1837,8 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			// aapt resource value: 0x7f060072
 			public const int MyButton = 2131099762;
 			
-			// aapt resource value: 0x7f060073
-			public const int action0 = 2131099763;
+			// aapt resource value: 0x7f060074
+			public const int action0 = 2131099764;
 			
 			// aapt resource value: 0x7f06005a
 			public const int action_bar = 2131099738;
@@ -1864,8 +1864,8 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			// aapt resource value: 0x7f06005b
 			public const int action_context_bar = 2131099739;
 			
-			// aapt resource value: 0x7f060077
-			public const int action_divider = 2131099767;
+			// aapt resource value: 0x7f060078
+			public const int action_divider = 2131099768;
 			
 			// aapt resource value: 0x7f060003
 			public const int action_menu_divider = 2131099651;
@@ -1885,8 +1885,8 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			// aapt resource value: 0x7f06003d
 			public const int activity_chooser_view_content = 2131099709;
 			
-			// aapt resource value: 0x7f060080
-			public const int agentWebView = 2131099776;
+			// aapt resource value: 0x7f060082
+			public const int agentWebView = 2131099778;
 			
 			// aapt resource value: 0x7f060049
 			public const int alertTitle = 2131099721;
@@ -1903,8 +1903,8 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			// aapt resource value: 0x7f060044
 			public const int buttonPanel = 2131099716;
 			
-			// aapt resource value: 0x7f060074
-			public const int cancel_action = 2131099764;
+			// aapt resource value: 0x7f060075
+			public const int cancel_action = 2131099765;
 			
 			// aapt resource value: 0x7f06002b
 			public const int center = 2131099691;
@@ -1918,8 +1918,8 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			// aapt resource value: 0x7f060052
 			public const int checkbox = 2131099730;
 			
-			// aapt resource value: 0x7f06007a
-			public const int chronometer = 2131099770;
+			// aapt resource value: 0x7f06007b
+			public const int chronometer = 2131099771;
 			
 			// aapt resource value: 0x7f060033
 			public const int clip_horizontal = 2131099699;
@@ -1969,8 +1969,8 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			// aapt resource value: 0x7f06001c
 			public const int end = 2131099676;
 			
-			// aapt resource value: 0x7f06007f
-			public const int end_padder = 2131099775;
+			// aapt resource value: 0x7f060080
+			public const int end_padder = 2131099776;
 			
 			// aapt resource value: 0x7f060023
 			public const int enterAlways = 2131099683;
@@ -2014,8 +2014,8 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			// aapt resource value: 0x7f06003f
 			public const int image = 2131099711;
 			
-			// aapt resource value: 0x7f06007e
-			public const int info = 2131099774;
+			// aapt resource value: 0x7f06007f
+			public const int info = 2131099775;
 			
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
@@ -2023,11 +2023,11 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			// aapt resource value: 0x7f06002f
 			public const int left = 2131099695;
 			
-			// aapt resource value: 0x7f060078
-			public const int line1 = 2131099768;
+			// aapt resource value: 0x7f060079
+			public const int line1 = 2131099769;
 			
-			// aapt resource value: 0x7f06007c
-			public const int line3 = 2131099772;
+			// aapt resource value: 0x7f06007d
+			public const int line3 = 2131099773;
 			
 			// aapt resource value: 0x7f06000b
 			public const int listMode = 2131099659;
@@ -2035,8 +2035,8 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			// aapt resource value: 0x7f060041
 			public const int list_item = 2131099713;
 			
-			// aapt resource value: 0x7f060076
-			public const int media_actions = 2131099766;
+			// aapt resource value: 0x7f060077
+			public const int media_actions = 2131099767;
 			
 			// aapt resource value: 0x7f06001d
 			public const int middle = 2131099677;
@@ -2079,6 +2079,12 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			
 			// aapt resource value: 0x7f060030
 			public const int right = 2131099696;
+			
+			// aapt resource value: 0x7f060073
+			public const int sampleListView = 2131099763;
+			
+			// aapt resource value: 0x7f060081
+			public const int sampleTextView = 2131099777;
 			
 			// aapt resource value: 0x7f060017
 			public const int screen = 2131099671;
@@ -2170,8 +2176,8 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			// aapt resource value: 0x7f060031
 			public const int start = 2131099697;
 			
-			// aapt resource value: 0x7f060075
-			public const int status_bar_latest_event_content = 2131099765;
+			// aapt resource value: 0x7f060076
+			public const int status_bar_latest_event_content = 2131099766;
 			
 			// aapt resource value: 0x7f060065
 			public const int submit_area = 2131099749;
@@ -2179,17 +2185,17 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			// aapt resource value: 0x7f06000d
 			public const int tabMode = 2131099661;
 			
-			// aapt resource value: 0x7f06007d
-			public const int text = 2131099773;
+			// aapt resource value: 0x7f06007e
+			public const int text = 2131099774;
 			
-			// aapt resource value: 0x7f06007b
-			public const int text2 = 2131099771;
+			// aapt resource value: 0x7f06007c
+			public const int text2 = 2131099772;
 			
 			// aapt resource value: 0x7f06004d
 			public const int textSpacerNoButtons = 2131099725;
 			
-			// aapt resource value: 0x7f060079
-			public const int time = 2131099769;
+			// aapt resource value: 0x7f06007a
+			public const int time = 2131099770;
 			
 			// aapt resource value: 0x7f060043
 			public const int title = 2131099715;
@@ -2407,19 +2413,22 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			public const int notification_template_part_time = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int select_dialog_item_material = 2130903086;
+			public const int SampleItem = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int select_dialog_multichoice_material = 2130903087;
+			public const int select_dialog_item_material = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int select_dialog_singlechoice_material = 2130903088;
+			public const int select_dialog_multichoice_material = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int support_simple_spinner_dropdown_item = 2130903089;
+			public const int select_dialog_singlechoice_material = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int WebAuthenticationBroker = 2130903090;
+			public const int support_simple_spinner_dropdown_item = 2130903090;
+			
+			// aapt resource value: 0x7f030033
+			public const int WebAuthenticationBroker = 2130903091;
 			
 			static Layout()
 			{

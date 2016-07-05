@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
+using Sprint.SESAT.IDMSample.Client.Droid.Utils;
 using Sprint.SESAT.IDMSample.Client.Shared.Sample;
 
 namespace Sprint.SESAT.IDMSample.Client.Droid.View.Activity
@@ -13,6 +14,7 @@ namespace Sprint.SESAT.IDMSample.Client.Droid.View.Activity
     [Activity(ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : Android.App.Activity
     {
+        private ListView _lstView;
         private SampleViewModel _viewModel;
         private Button _button;
         int count = 1;
@@ -33,6 +35,7 @@ namespace Sprint.SESAT.IDMSample.Client.Droid.View.Activity
             // Get our button from the layout resource,
             // and attach an event to it
             _button = FindViewById<Button>(Resource.Id.MyButton);
+            _lstView = FindViewById<ListView>(Resource.Id.sampleListView);
 
             var bootStrapper = new BootStrapper(this);
             _viewModel = SimpleIoc.Default.GetInstance<SampleViewModel>();
@@ -43,6 +46,10 @@ namespace Sprint.SESAT.IDMSample.Client.Droid.View.Activity
                 if (_viewModel.IsLoggedIn)
                 {
                     _viewModel.LogoutCommand.Execute(null);
+                }
+                else
+                {
+                    _viewModel.LoadDataCommand.Execute(null);
                 }
             };
 
@@ -57,16 +64,13 @@ namespace Sprint.SESAT.IDMSample.Client.Droid.View.Activity
 
         private void _viewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            if (e.PropertyName.Equals(nameof(_viewModel.IsLoggedIn)) && _viewModel.IsLoggedIn)
+            if (e.PropertyName.Equals(nameof(_viewModel.IsLoggedIn)))
             {
-                _button.Text = "Logout";
+                _button.Text = _viewModel.IsLoggedIn ? "Logout" : "Load Data";
             }
-            else if (e.PropertyName.Equals(nameof(_viewModel.IsLoading)))
+            else if (e.PropertyName.Equals(nameof(_viewModel.SampleList)))
             {
-                if (_viewModel.IsLoading)
-                    _button.Visibility = ViewStates.Invisible;
-                else if (_viewModel.IsLoggedIn)
-                    _button.Visibility = ViewStates.Visible;
+                _lstView.Adapter = new SampleAdapter(_viewModel.SampleList, this);
             }
         }
     }
