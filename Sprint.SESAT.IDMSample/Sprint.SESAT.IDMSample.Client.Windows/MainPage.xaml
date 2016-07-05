@@ -2,7 +2,6 @@
     x:Class="Sprint.SESAT.IDMSample.Client.Windows.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Sprint.SESAT.IDMSample.Client.Windows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:utils="using:Sprint.SESAT.IDMSample.Client.Windows.Utils"
@@ -25,10 +24,15 @@
     </Grid>
     
     <Page.BottomAppBar>
-        <CommandBar Visibility="{x:Bind ViewModel.IsLoggedIn, Converter={StaticResource BoolToVisibilityConverter}, Mode=OneWay}">
+        <CommandBar Visibility="{x:Bind ViewModel.IsLoading, Converter={StaticResource BoolToVisibilityConverter}, Mode=OneWay, ConverterParameter=reverse}">
             <AppBarButton Label="Logout"
                           Icon="Cancel"
-                          Command="{x:Bind ViewModel.LogoutCommand}"/>
+                          Visibility="{x:Bind ViewModel.IsLoggedIn, Converter={StaticResource BoolToVisibilityConverter}, Mode=OneWay}"
+                          Click="ButtonBase_OnClick"/>
+            <AppBarButton Label="Refresh"
+                          Visibility="{x:Bind ViewModel.IsLoggedIn, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=reverse, Mode=OneWay}"
+                          Icon="Refresh"
+                          Click="Logout_OnClick" />
         </CommandBar>
     </Page.BottomAppBar>
 </Page>
