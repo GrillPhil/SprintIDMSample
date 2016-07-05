@@ -143,7 +143,27 @@ for a scope to get full access to a user's ToDo list.
 The client can then use the scope's key value "user_impersonation" to request access.
 
 ## Roles based access control (RBAC)
+Within the application, access to certain functionality is restricted to subsets of users. For instance, not every user has the ability to create a support request on a Sprint project.
+This kind of authorization is implemented using role based access control (RBAC). When using RBAC, an administrator grants permissions to roles, not to individual users or groups. 
+The administrator can then assign roles to different users and groups to control who has access to what content and functionality.
 
+Just as scopes, role can be defined in the application manifest file in the management portal. The following shows how to define the "Admin" role for an application.
+
+```json
+"appRoles": [
+    {
+      "allowedMemberTypes": [
+        "User"
+      ],
+      "description": "Admins can manage roles and perform all task actions.",
+      "displayName": "Admin",
+      "id": "81e10148-16a8-432a-b86d-ef620c3e48ef",
+      "isEnabled": true,
+      "origin": "Application",
+      "value": "Admin"
+    }
+  ]
+  ```
 
 #Notes
 - Using ModernHttpClient to properly handle https requests for iOS and Android.
