@@ -12,6 +12,6 @@ namespace Sprint.SESAT.IDMSample.Client.Shared
         public static string ClientId = "7e9718b3-0ccb-4ebe-8508-160000216916";
         public static string Authority = "https://login.windows.net/SprintIDMSample.onmicrosoft.com";
         public static Uri RedirectUri = new Uri("http://Sprint.SESAT.IDMSample.ADApp.NativeApp");
-        public static string LogoutUrl = "https://login.microsoftonline.com/SprintIDMPSample.onmicrosoft.com/oauth2/logout?post_logout_redirect_uri=https://SprintIDMSample.azurewebsites.net/api/Sample";
+        public static string LogoutUrl = "https://login.windows.net/SprintIDMPSample.onmicrosoft.com/oauth2/logout?post_logout_redirect_uri=https://SprintIDMSample.azurewebsites.net/Logout";
     }
 }
