@@ -147,7 +147,7 @@ Within the application, access to certain functionality is restricted to subsets
 This kind of authorization is implemented using role based access control (RBAC). When using RBAC, an administrator grants permissions to roles, not to individual users or groups. 
 The administrator can then assign roles to different users and groups to control who has access to what content and functionality.
 
-Just as scopes, role can be defined in the application manifest file in the management portal. The following shows how to define the "Admin" role for an application.
+Just as scopes, roles can be defined in the application manifest file in the management portal. The following shows how to define the "Admin" role for an application.
 
 ```json
 "appRoles": [
@@ -164,6 +164,35 @@ Just as scopes, role can be defined in the application manifest file in the mana
     }
   ]
   ```
+
+### Backend Configuration
+When writing API endpoints, use the authorize tag to restrict the API to spcific roles. Here's an example of a GET API endpoint that restricts
+access to Admins, Sprint Partners and Insurances. We can then proceed and perform different actions based on the user's actual role:
+```c#
+[HttpGet]
+[Authorize(Roles = "Admin, SprintPartner, Insurance")]
+public object GetObject()
+{
+    if (User.IsInRole("Admin"))
+    {
+        // Do admin action here...
+    }
+    else if (User.IsInRole("SprintPartner"))
+    {
+        // Do sprint partner action here...
+    }
+    ...
+}
+```
+
+To retrieve a user's roles, use
+```c# 
+ClaimsIdentity claimsId = ClaimsPrincipal.Current.Identity as ClaimsIdentity;
+var appRoles = new List<String>();
+foreach (Claim claim in ClaimsPrincipal.Current.FindAll(claimsId.RoleClaimType))
+    appRoles.Add(claim.Value);
+```
+
 
 #Notes
 - Using ModernHttpClient to properly handle https requests for iOS and Android.
