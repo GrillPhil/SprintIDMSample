@@ -47,14 +47,19 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.Service
                         !string.IsNullOrEmpty(authResult.AccessToken) &&
                         !string.IsNullOrEmpty(authResult.AccessTokenType))
                     {
-                        httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(authResult.AccessTokenType, authResult.AccessToken);
+                        httpClient.DefaultRequestHeaders.Authorization =
+                            new AuthenticationHeaderValue(authResult.AccessTokenType, authResult.AccessToken);
                     }
                 }
                 catch (AdalServiceException ex) when (ex.ErrorCode == "authentication_canceled")
                 {
                     // todo: user has canceled login
+                    // note: cancelation by user should be allowed
                 }
-                // todo: error handling
+                catch (Exception e)
+                {
+                    // display message to user
+                }
             }
 
             return httpClient;
