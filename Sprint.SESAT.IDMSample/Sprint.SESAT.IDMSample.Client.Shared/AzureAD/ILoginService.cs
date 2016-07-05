@@ -10,5 +10,6 @@ namespace Sprint.SESAT.IDMSample.Client.Shared.AzureAD
     public interface ILoginService
     {
         Task<AuthenticationResult> LoginAsync();
+        void Logout();
     }
 }
