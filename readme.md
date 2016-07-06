@@ -5,9 +5,8 @@
 
 ##Microsoft Account
 Key|Value
--|-
+|-|-|
 Username|sprint.sesat.idmsample@outlook.com
-Password|Sprint!2016
 
 ##Resource Group
 Key|Value
