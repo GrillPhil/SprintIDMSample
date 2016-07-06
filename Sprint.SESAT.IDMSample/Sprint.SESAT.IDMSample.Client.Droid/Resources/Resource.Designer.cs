@@ -2975,9 +2975,6 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			// aapt resource value: 0x7f090140
 			public const int Base_Widget_Design_TabLayout = 2131296576;
 			
-			// aapt resource value: 0x7f090157
-			public const int NoActionBar = 2131296599;
-			
 			// aapt resource value: 0x7f090017
 			public const int Platform_AppCompat = 2131296279;
 			
@@ -3049,9 +3046,6 @@ namespace Sprint.SESAT.IDMSample.Client.Droid
 			
 			// aapt resource value: 0x7f090035
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131296309;
-			
-			// aapt resource value: 0x7f090158
-			public const int SprintTheme_SplashScreen = 2131296600;
 			
 			// aapt resource value: 0x7f0900b6
 			public const int TextAppearance_AppCompat = 2131296438;

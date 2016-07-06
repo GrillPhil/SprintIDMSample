@@ -2,7 +2,6 @@
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
-using Android.Views;
 using Android.Widget;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
@@ -11,7 +10,7 @@ using Sprint.SESAT.IDMSample.Client.Shared.Sample;
 
 namespace Sprint.SESAT.IDMSample.Client.Droid.View.Activity
 {
-    [Activity(ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(ScreenOrientation = ScreenOrientation.Portrait, MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Android.App.Activity
     {
         private ListView _lstView;
