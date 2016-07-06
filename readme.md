@@ -4,9 +4,9 @@
 - 170 € credit
 
 ##Microsoft Account
-|Key|Value|
-|-|-|
-|Username|sprint.sesat.idmsample@outlook.com|
+Key|Value
+---|---
+Username|sprint.sesat.idmsample@outlook.com
 
 ##Resource Group
 Key|Value
