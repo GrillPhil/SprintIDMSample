@@ -7,6 +7,9 @@ namespace Sprint.SESAT.IDMSample.Client.Shared
         // Azure Test Endpoint
         public static string BaseUrl = "https://sprintsesatidmsample.azurewebsites.net/api/";
 
+        // Local Test Endpoint
+        //public static string BaseUrl = "http://localhost:55555/api/";
+
         // Azure AD Configuration
         public static string Resource = "http://SprintIDMSample.onmicrosoft.com/Sprint.SESAT.IDMSample.ADApp.Webapi";
         public static string ClientId = "7e9718b3-0ccb-4ebe-8508-160000216916";

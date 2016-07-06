@@ -1,11 +1,3 @@
-#Todos
-- Error Handling
-- Logout
-- iOS Demo Client
-- groups/scopes to hide/show features in client
-- groups/scopes to respect in web api
-- styling/customization of login experience
-
 #Azure Configuration
 ##Azure Test Subscription
 - Free 30 day trial, started 05.07.2016
@@ -50,70 +42,6 @@ Name|Sprint.SESAT.IDMSample.ADApp.Webapi
 Type|Web Application
 Sign-on Url|http://localhost:55555
 App Id Uri|http://SprintIDMSample.onmicrosoft.com/Sprint.SESAT.IDMSample.ADApp.Webapi
-
-#####manifest.json
-```json
-{
-  "appId": "e6ce8ac7-d4ea-4742-b205-2520c5e7c792",
-  "appRoles": [],
-  "availableToOtherTenants": false,
-  "displayName": "Sprint.SESAT.IDMSample.ADApp.Webapi",
-  "errorUrl": null,
-  "groupMembershipClaims": null,
-  "homepage": "http://localhost:55555",
-  "identifierUris": [
-    "http://SprintSample.onmicrosoft.com/Sprint.SESAT.IDMSample.ADApp.Webapi"
-  ],
-  "keyCredentials": [],
-  "knownClientApplications": [],
-  "logoutUrl": null,
-  "oauth2AllowImplicitFlow": false,
-  "oauth2AllowUrlPathMatching": false,
-  "oauth2Permissions": [
-    {
-      "adminConsentDescription": "Allow the application to access Sprint.SESAT.IDMSample.ADApp.Webapi on behalf of the signed-in user.",
-      "adminConsentDisplayName": "Access Sprint.SESAT.IDMSample.ADApp.Webapi",
-      "id": "7d5ca970-9cab-4a18-ad1f-4285611358b6",
-      "isEnabled": true,
-      "origin": "Application",
-      "type": "User",
-      "userConsentDescription": "Allow the application to access Sprint.SESAT.IDMSample.ADApp.Webapi on your behalf.",
-      "userConsentDisplayName": "Access Sprint.SESAT.IDMSample.ADApp.Webapi",
-      "value": "user_impersonation"
-    }
-  ],
-  "oauth2RequirePostResponse": false,
-  "passwordCredentials": [],
-  "publicClient": null,
-  "replyUrls": [
-    "http://localhost:55555"
-  ],
-  "requiredResourceAccess": [
-    {
-      "resourceAppId": "00000002-0000-0000-c000-000000000000",
-      "resourceAccess": [
-        {
-          "id": "311a71cc-e848-46a1-bdf8-97ff7156d8e6",
-          "type": "Scope"
-        }
-      ]
-    }
-  ],
-  "samlMetadataUrl": null,
-  "extensionProperties": [],
-  "objectType": "Application",
-  "objectId": "f82ee68c-4115-420b-add8-331832dbd93f",
-  "deletionTimestamp": null,
-  "createdOnBehalfOf": null,
-  "createdObjects": [],
-  "manager": null,
-  "directReports": [],
-  "members": [],
- "memberOf": [],
-  "owners": [],
-  "ownedObjects": []
-}
-```
 
 ####Native App
 Key|Value
