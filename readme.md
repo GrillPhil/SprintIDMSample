@@ -10,33 +10,32 @@ Username|sprint.sesat.idmsample@outlook.com
 
 ##Resource Group
 Key|Value
--|-
+---|---
 Name|Sprint.SESAT.IDMSample
 Subscription|Visual Studio Ultimate bei MSDN (bauknecht@medialesson.de)
 
 ##Azure Web App with Sample Api
 Key|Value
--|-
+---|---
 Endpoint|https://sprintsesatidmsample.azurewebsites.net
 App Service Plan|SprintSESATIDMSample (Basic: 1 small, West Europe)
 
 ##Azure Active Directory
 Key|Value
--|-
+---|---
 Name|Sprint.SESAT.IDMSample
 Domain|SprintIDMSample.onmicrosoft.com
 
 ###Sample User
 Key|Value
--|-
+---|---
 Name|John Doe
 Username|johndoe@SprintIDMSample.onmicrosoft.com
-Password|Sprint!2016
 
 ###Azure AD Applications
 ####WebApi
 Key|Value
--|-
+---|---
 Name|Sprint.SESAT.IDMSample.ADApp.Webapi
 Type|Web Application
 Sign-on Url|http://localhost:55555
@@ -44,14 +43,14 @@ App Id Uri|http://SprintIDMSample.onmicrosoft.com/Sprint.SESAT.IDMSample.ADApp.W
 
 ####Native App
 Key|Value
--|-
+---|---
 Name|Sprint.SESAT.IDMSample.ADApp.NativeApp
 Type|Native Client Application
 Redirect Uri|http://Sprint.SESAT.IDMSample.ADApp.NativeApp
 
 ##Azure Web App with Sample Api
 Key|Value
--|-
+---|---
 Endpoint|https://sprintsample.azurewebsites.net
 App Service Plan|SprintSESATIDMSample (Basic: 1 small)
 
